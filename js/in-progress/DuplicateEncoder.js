@@ -13,15 +13,17 @@
 // "(( @"     =>  "))((" 
 
 function duplicateEncode(word){
-    let array = word.split('')
+    let array = word.toLowerCase().split('')
+    
+    let result = array.map(letter => 
+        array.indexOf(letter) == array.lastIndexOf(letter) ? "(" : ")"
+    )
 
-    let string = array.filter(letter => letter == array ).length
-
-    console.log(string)
+    return result.join('')
 }
 
 // Tests
-duplicateEncode("din")
+// duplicateEncode("din")
 // duplicateEncode("recede")
 // duplicateEncode("Success")
-// duplicateEncode("(( @")
+duplicateEncode("(( @")
