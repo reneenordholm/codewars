@@ -1,3 +1,5 @@
+// Adding text to test github functionality
+
 // The goal of this exercise is to convert a string to a new string 
 // where each character in the new string is 
 
